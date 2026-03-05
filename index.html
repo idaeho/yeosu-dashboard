@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ì¬ìì ì¬íì¡°ì¬ íµê³ ëìë³´ë</title>
+<title>여수시 사회조사 통계 대시보드</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
@@ -130,269 +130,269 @@ body{
 <!-- HEADER -->
 <div class="dashboard-header">
   <div>
-    <h1>ì¬ìì ì¬íì¡°ì¬ íµê³ ëìë³´ë</h1>
-    <div class="subtitle">ì ë¼ë¨ë ì¬íì¡°ì¬ â ì¬ìì ìëµì ë§ì´í¬ë¡ë°ì´í° ë¶ì</div>
+    <h1>여수시 사회조사 통계 대시보드</h1>
+    <div class="subtitle">전라남도 사회조사 — 여수시 응답자 마이크로데이터 분석</div>
   </div>
   <div class="header-meta">
-    <span>ì´ ìëµì <b>1,661</b>ëª</span>
-    <span>ì¡°ì¬í­ëª© <b>208</b>ê° ë³ì</span>
-    <span>ì¶ì² : ì ë¼ë¨ë ì¬íì¡°ì¬</span>
+    <span>총 응답자 <b>1,661</b>명</span>
+    <span>조사항목 <b>208</b>개 변수</span>
+    <span>출처 : 전라남도 사회조사</span>
   </div>
 </div>
 
 <!-- KPI ROW -->
 <div class="kpi-row">
   <div class="kpi-card">
-    <div class="kpi-label">ì¶ì ë§ì¡±ë</div>
+    <div class="kpi-label">삶의 만족도</div>
     <div class="kpi-value">6.53</div>
-    <div class="kpi-sub">10ì  ë§ì  Â· ì ì²´ íê· </div>
+    <div class="kpi-sub">10점 만점 · 전체 평균</div>
   </div>
   <div class="kpi-card green">
-    <div class="kpi-label">íë³µ ì§ì</div>
+    <div class="kpi-label">행복 지수</div>
     <div class="kpi-value">6.41</div>
-    <div class="kpi-sub">10ì  ë§ì  Â· ì ì²´ íê· </div>
+    <div class="kpi-sub">10점 만점 · 전체 평균</div>
   </div>
   <div class="kpi-card">
-    <div class="kpi-label">ê±°ì£¼ì§ì­ ë§ì¡±ë</div>
+    <div class="kpi-label">거주지역 만족도</div>
     <div class="kpi-value">6.40</div>
-    <div class="kpi-sub">10ì  ë§ì  Â· ì ì²´ íê· </div>
+    <div class="kpi-sub">10점 만점 · 전체 평균</div>
   </div>
   <div class="kpi-card green">
-    <div class="kpi-label">ì¬ì ê±°ì£¼ ìí¥</div>
+    <div class="kpi-label">여수 거주 의향</div>
     <div class="kpi-value">76.6<span style="font-size:16px">%</span></div>
-    <div class="kpi-sub">ê¸ì (4+5) ìëµ ë¹ì¨</div>
+    <div class="kpi-sub">긍정(4+5) 응답 비율</div>
   </div>
   <div class="kpi-card">
-    <div class="kpi-label">ê±±ì  ìì¤</div>
+    <div class="kpi-label">걱정 수준</div>
     <div class="kpi-value">4.57</div>
-    <div class="kpi-sub">10ì  ë§ì  Â· ì ì²´ íê· </div>
+    <div class="kpi-sub">10점 만점 · 전체 평균</div>
   </div>
   <div class="kpi-card green">
-    <div class="kpi-label">íê·  ê°êµ¬ì ì</div>
+    <div class="kpi-label">평균 가구원 수</div>
     <div class="kpi-value">2.09</div>
-    <div class="kpi-sub">1ì¸ ê°êµ¬ 26.8%</div>
+    <div class="kpi-sub">1인 가구 26.8%</div>
   </div>
 </div>
 
-<!-- SECTION 1: ì¸êµ¬íµê³ -->
-<div class="section-title">DEMOGRAPHICS â ì¸êµ¬íµê³ ë¶ì</div>
+<!-- SECTION 1: 인구통계 -->
+<div class="section-title">DEMOGRAPHICS — 인구통계 분석</div>
 <div class="grid-3">
-  <!-- ì°ë ¹ë ë¶í¬ -->
+  <!-- 연령대 분포 -->
   <div class="card">
-    <div class="card-title">ì°ë ¹ë ë¶í¬ <small>N=1,661</small></div>
+    <div class="card-title">연령대 분포 <small>N=1,661</small></div>
     <div class="chart-wrap"><canvas id="chartAge"></canvas></div>
   </div>
-  <!-- ì±ë³ ë¶í¬ -->
+  <!-- 성별 분포 -->
   <div class="card">
-    <div class="card-title">ì±ë³ êµ¬ì± <small>N=1,661</small></div>
+    <div class="card-title">성별 구성 <small>N=1,661</small></div>
     <div class="chart-wrap"><canvas id="chartGender"></canvas></div>
     <div style="text-align:center;margin-top:8px">
-      <span class="badge badge-blue">ë¨ì± 782ëª (47.1%)</span>
-      <span class="badge badge-green" style="margin-left:6px">ì¬ì± 879ëª (52.9%)</span>
+      <span class="badge badge-blue">남성 782명 (47.1%)</span>
+      <span class="badge badge-green" style="margin-left:6px">여성 879명 (52.9%)</span>
     </div>
   </div>
-  <!-- ê°êµ¬ìì -->
+  <!-- 가구원수 -->
   <div class="card">
-    <div class="card-title">ê°êµ¬ì ì ë¶í¬ <small>N=1,661</small></div>
+    <div class="card-title">가구원 수 분포 <small>N=1,661</small></div>
     <div class="chart-wrap"><canvas id="chartHousehold"></canvas></div>
   </div>
 </div>
 
 <div class="grid-3">
-  <!-- í¼ì¸ìí -->
+  <!-- 혼인상태 -->
   <div class="card">
-    <div class="card-title">í¼ì¸ ìí <small>N=1,661</small></div>
+    <div class="card-title">혼인 상태 <small>N=1,661</small></div>
     <div class="chart-wrap short"><canvas id="chartMarriage"></canvas></div>
   </div>
-  <!-- êµì¡ì ë -->
+  <!-- 교육정도 -->
   <div class="card">
-    <div class="card-title">êµì¡ ìì¤ <small>N=1,661</small></div>
+    <div class="card-title">교육 수준 <small>N=1,661</small></div>
     <div class="chart-wrap short"><canvas id="chartEdu"></canvas></div>
   </div>
-  <!-- ìíê· ê°êµ¬ìë -->
+  <!-- 월평균가구소득 -->
   <div class="card">
-    <div class="card-title">ìíê·  ê°êµ¬ìë <small>N=1,008 (ìëµì)</small></div>
+    <div class="card-title">월평균 가구소득 <small>N=1,008 (응답자)</small></div>
     <div class="chart-wrap short"><canvas id="chartIncome"></canvas></div>
   </div>
 </div>
 
-<!-- SECTION 2: ì¶ì ì§ -->
-<div class="section-title">QUALITY OF LIFE â ì¶ì ì§ Â· íë³µ Â· ë§ì¡±ë</div>
+<!-- SECTION 2: 삶의 질 -->
+<div class="section-title">QUALITY OF LIFE — 삶의 질 · 행복 · 만족도</div>
 <div class="grid-2">
-  <!-- ì¶ë§ì¡±ë ë¶í¬ -->
+  <!-- 삶만족도 분포 -->
   <div class="card">
-    <div class="card-title">ì¶ì ë§ì¡±ë ë¶í¬ <small>0~10ì  ì²ë</small></div>
+    <div class="card-title">삶의 만족도 분포 <small>0~10점 척도</small></div>
     <div class="chart-wrap"><canvas id="chartLifeSat"></canvas></div>
   </div>
-  <!-- ì°ë ¹ëë³ ì¶ë§ì¡±ë/íë³µë -->
+  <!-- 연령대별 삶만족도/행복도 -->
   <div class="card">
-    <div class="card-title">ì°ë ¹ëë³ ì¶ì ë§ì¡±ë Â· íë³µë Â· ê±±ì ë</div>
+    <div class="card-title">연령대별 삶의 만족도 · 행복도 · 걱정도</div>
     <div class="chart-wrap"><canvas id="chartAgeWellbeing"></canvas></div>
   </div>
 </div>
 
 <div class="grid-3">
-  <!-- ì¬ì ìíë§ì¡±ë -->
+  <!-- 여수 생활만족도 -->
   <div class="card">
-    <div class="card-title">ì¬ìì ìííê²½ ë§ì¡±ë <small>5ì  ì²ë</small></div>
+    <div class="card-title">여수시 생활환경 만족도 <small>5점 척도</small></div>
     <div class="chart-wrap tall"><canvas id="chartYeosuSat"></canvas></div>
   </div>
-  <!-- êµíµìë¨ ë§ì¡±ë -->
+  <!-- 교통수단 만족도 -->
   <div class="card">
-    <div class="card-title">êµíµìë¨ ë§ì¡±ë <small>íê· ì ì</small></div>
+    <div class="card-title">교통수단 만족도 <small>평균점수</small></div>
     <div class="chart-wrap tall"><canvas id="chartTransport"></canvas></div>
   </div>
-  <!-- ë³µì§ë§ì¡±ë -->
+  <!-- 복지만족도 -->
   <div class="card">
-    <div class="card-title">ë³µì§ ë¶ì¼ë³ ë§ì¡±ë <small>íê· ì ì</small></div>
+    <div class="card-title">복지 분야별 만족도 <small>평균점수</small></div>
     <div class="chart-wrap tall"><canvas id="chartWelfare"></canvas></div>
   </div>
 </div>
 
-<!-- SECTION 3: ê±°ì£¼ìí¥/ê²½ì  -->
-<div class="section-title">RESIDENCE & ECONOMY â ê±°ì£¼ ìí¥ Â· ê²½ì  Â· ì¼ìë¦¬</div>
+<!-- SECTION 3: 거주의향/경제 -->
+<div class="section-title">RESIDENCE & ECONOMY — 거주 의향 · 경제 · 일자리</div>
 <div class="grid-2">
-  <!-- ì°ë ¹ëë³ ê±°ì£¼ìí¥ -->
+  <!-- 연령대별 거주의향 -->
   <div class="card">
-    <div class="card-title">ì°ë ¹ëë³ ì¬ìì ê±°ì£¼ ìí¥ <small>5ì  ì²ë íê· </small></div>
+    <div class="card-title">연령대별 여수시 거주 의향 <small>5점 척도 평균</small></div>
     <div class="chart-wrap"><canvas id="chartResidence"></canvas></div>
   </div>
-  <!-- ì°ë ¹ëë³ ìë -->
+  <!-- 연령대별 소득 -->
   <div class="card">
-    <div class="card-title">ì°ë ¹ëë³ ìíê·  ê°êµ¬ìë <small>ìëì½ë íê· </small></div>
+    <div class="card-title">연령대별 월평균 가구소득 <small>소득콄드 평균</small></div>
     <div class="chart-wrap"><canvas id="chartIncomeAge"></canvas></div>
   </div>
 </div>
 
 <div class="grid-3">
-  <!-- ìëë§ì¡±ë -->
+  <!-- 소득만족도 -->
   <div class="card">
-    <div class="card-title">ìë ë§ì¡±ë <small>5ì  ì²ë Â· N=1,479</small></div>
+    <div class="card-title">소득 만족도 <small>5점 척도 · N=1,479</small></div>
     <div class="chart-wrap short"><canvas id="chartIncomeSat"></canvas></div>
   </div>
-  <!-- ì¼ìë¦¬ ì¶©ë¶ì ë -->
+  <!-- 일자리 충분정도 -->
   <div class="card">
-    <div class="card-title">ì¼ìë¦¬ ì¶©ë¶ ì ë <small>5ì  ì²ë</small></div>
+    <div class="card-title">일자리 충분 정도 <small>5점 척도</small></div>
     <div class="chart-wrap short"><canvas id="chartJobSufficiency"></canvas></div>
   </div>
-  <!-- ìë¹íë ì¥ì -->
+  <!-- 소비활동 장소 -->
   <div class="card">
-    <div class="card-title">ìë¹íë ì£¼ì ì¥ì <small>N=1,661</small></div>
+    <div class="card-title">소비활동 주요 장소 <small>N=1,661</small></div>
     <div class="chart-wrap short"><canvas id="chartShopping"></canvas></div>
   </div>
 </div>
 
-<!-- SECTION 4: ì ì± ìì -->
-<div class="section-title">POLICY DEMANDS â ì ì± ìì ë¶ì</div>
+<!-- SECTION 4: 정책 수요 -->
+<div class="section-title">POLICY DEMANDS — 정책 수요 분석</div>
 <div class="grid-4">
-  <!-- ì¸êµ¬ì¦ê°ì ì± -->
+  <!-- 인구증가정책 -->
   <div class="card">
-    <div class="card-title">ì¸êµ¬ì¦ê° ì ì± ì°ì ìì</div>
-    <div class="rank-item"><div class="rank-num">1</div><div class="rank-text">ì¼ìë¦¬ ì°½ì¶</div><div class="rank-val">758</div></div>
-    <div class="rank-item"><div class="rank-num">2</div><div class="rank-text">ì¶ì°Â·ìì¡ ì§ì</div><div class="rank-val">316</div></div>
-    <div class="rank-item"><div class="rank-num">3</div><div class="rank-text">ì£¼ê±°íê²½ ê°ì </div><div class="rank-val">237</div></div>
-    <div class="rank-item"><div class="rank-num">4</div><div class="rank-text">êµì¡íê²½ ê°ì </div><div class="rank-val">94</div></div>
-    <div class="rank-item"><div class="rank-num">5</div><div class="rank-text">êµíµ ì¸íë¼</div><div class="rank-val">79</div></div>
+    <div class="card-title">인구증가 정책 우선순위</div>
+    <div class="rank-item"><div class="rank-num">1</div><div class="rank-text">일자리 창출</div><div class="rank-val">758</div></div>
+    <div class="rank-item"><div class="rank-num">2</div><div class="rank-text">출산·양육 지원</div><div class="rank-val">316</div></div>
+    <div class="rank-item"><div class="rank-num">3</div><div class="rank-text">주거환경 개선</div><div class="rank-val">237</div></div>
+    <div class="rank-item"><div class="rank-num">4</div><div class="rank-text">교육환경 개선</div><div class="rank-val">94</div></div>
+    <div class="rank-item"><div class="rank-num">5</div><div class="rank-text">교통 인프라</div><div class="rank-val">79</div></div>
   </div>
-  <!-- ì ì¶ì°ì ì± -->
+  <!-- 저출산정책 -->
   <div class="card">
-    <div class="card-title">ì ì¶ì° ëì ì ì±</div>
-    <div class="rank-item"><div class="rank-num">1</div><div class="rank-text">ìì¡ë¹ ì§ì íë</div><div class="rank-val">594</div></div>
-    <div class="rank-item"><div class="rank-num">2</div><div class="rank-text">ë³´ì¡ìì¤ íì¶©</div><div class="rank-val">315</div></div>
-    <div class="rank-item"><div class="rank-num">3</div><div class="rank-text">ì¼Â·ê°ì  ìë¦½</div><div class="rank-val">274</div></div>
-    <div class="rank-item"><div class="rank-num">4</div><div class="rank-text">ì£¼ê±° ìì </div><div class="rank-val">203</div></div>
-    <div class="rank-item"><div class="rank-num">5</div><div class="rank-text">ê³ ì© ìì </div><div class="rank-val">110</div></div>
+    <div class="card-title">저출산 대응 정책</div>
+    <div class="rank-item"><div class="rank-num">1</div><div class="rank-text">양육비 지원 확대</div><div class="rank-val">594</div></div>
+    <div class="rank-item"><div class="rank-num">2</div><div class="rank-text">보육시설 확충</div><div class="rank-val">315</div></div>
+    <div class="rank-item"><div class="rank-num">3</div><div class="rank-text">일·가정 양립</div><div class="rank-val">274</div></div>
+    <div class="rank-item"><div class="rank-num">4</div><div class="rank-text">주거 안정</div><div class="rank-val">203</div></div>
+    <div class="rank-item"><div class="rank-num">5</div><div class="rank-text">고용 안정</div><div class="rank-val">110</div></div>
   </div>
-  <!-- ì ì£¼ì¬ê±´ ê°ì  -->
+  <!-- 정주여건 개선 -->
   <div class="card">
-    <div class="card-title">ì ì£¼ì¬ê±´ ê°ì  ê³¼ì </div>
-    <div class="rank-item"><div class="rank-num">1</div><div class="rank-text">ëì¤êµíµ íì¶©</div><div class="rank-val">446</div></div>
-    <div class="rank-item"><div class="rank-num">2</div><div class="rank-text">ë¬¸íìì¤ íì¶©</div><div class="rank-val">415</div></div>
-    <div class="rank-item"><div class="rank-num">3</div><div class="rank-text">ìë£ìì¤ íë</div><div class="rank-val">371</div></div>
-    <div class="rank-item"><div class="rank-num">4</div><div class="rank-text">ì£¼ê±°íê²½ ê°ì </div><div class="rank-val">279</div></div>
-    <div class="rank-item"><div class="rank-num">5</div><div class="rank-text">ë³´ì¡íê²½ ê°ì </div><div class="rank-val">50</div></div>
+    <div class="card-title">정주여건 개선 과제</div>
+    <div class="rank-item"><div class="rank-num">1</div><div class="rank-text">대중교통 확충</div><div class="rank-val">446</div></div>
+    <div class="rank-item"><div class="rank-num">2</div><div class="rank-text">문화시설 확충</div><div class="rank-val">415</div></div>
+    <div class="rank-item"><div class="rank-num">3</div><div class="rank-text">의료시설 확대</div><div class="rank-val">371</div></div>
+    <div class="rank-item"><div class="rank-num">4</div><div class="rank-text">주거환경 개선</div><div class="rank-val">279</div></div>
+    <div class="rank-item"><div class="rank-num">5</div><div class="rank-text">보육환경 개선</div><div class="rank-val">50</div></div>
   </div>
-  <!-- ì¼ìë¦¬ì°½ì¶ì ì± -->
+  <!-- 일자리창출정책 -->
   <div class="card">
-    <div class="card-title">ì¼ìë¦¬ ì°½ì¶ ì ì±</div>
-    <div class="rank-item"><div class="rank-num">1</div><div class="rank-text">ê¸°ì ì ì¹Â·ì§ì</div><div class="rank-val">554</div></div>
-    <div class="rank-item"><div class="rank-num">2</div><div class="rank-text">ê³µê³µ ì¼ìë¦¬</div><div class="rank-val">259</div></div>
-    <div class="rank-item"><div class="rank-num">3</div><div class="rank-text">ì§ìíë ¨ ê°í</div><div class="rank-val">241</div></div>
-    <div class="rank-item"><div class="rank-num">4</div><div class="rank-text">ì°½ì ì§ì</div><div class="rank-val">203</div></div>
-    <div class="rank-item"><div class="rank-num">5</div><div class="rank-text">ê´ê´ì°ì ì¡ì±</div><div class="rank-val">105</div></div>
+    <div class="card-title">일자리 창출 정책</div>
+    <div class="rank-item"><div class="rank-num">1</div><div class="rank-text">기업 유치·지원</div><div class="rank-val">554</div></div>
+    <div class="rank-item"><div class="rank-num">2</div><div class="rank-text">공공 일자리</div><div class="rank-val">259</div></div>
+    <div class="rank-item"><div class="rank-num">3</div><div class="rank-text">직업훈련 강화</div><div class="rank-val">241</div></div>
+    <div class="rank-item"><div class="rank-num">4</div><div class="rank-text">창업 지원</div><div class="rank-val">203</div></div>
+    <div class="rank-item"><div class="rank-num">5</div><div class="rank-text">관광산업 육성</div><div class="rank-val">105</div></div>
   </div>
 </div>
 
-<!-- SECTION 5: ìì /íê²½/ëì§í¸ -->
-<div class="section-title">SAFETY Â· ENVIRONMENT Â· DIGITAL â ìì  Â· íê²½ Â· ëì§í¸</div>
+<!-- SECTION 5: 안전/환경/디지털 -->
+<div class="section-title">SAFETY · ENVIRONMENT · DIGITAL — 안전 · 환경 · 디지털</div>
 <div class="grid-3">
-  <!-- ì¼ê°ìì  -->
+  <!-- 야간안전 -->
   <div class="card">
-    <div class="card-title">ì¼ê° íë ìì  ì¸ì <small>N=1,661</small></div>
+    <div class="card-title">야간 활동 안전 인식 <small>N=1,661</small></div>
     <div class="chart-wrap short"><canvas id="chartNightSafety"></canvas></div>
   </div>
-  <!-- íê¸°ë¬¼ ë§ì¡±ë -->
+  <!-- 폐기물 만족도 -->
   <div class="card">
-    <div class="card-title">íê¸°ë¬¼ ì²ë¦¬ ë§ì¡±ë <small>5ì  ì²ë</small></div>
+    <div class="card-title">폐기물 처리 만족도 <small>5점 척도</small></div>
     <div class="chart-wrap short"><canvas id="chartWaste"></canvas></div>
   </div>
-  <!-- SNS ì¬ì© -->
+  <!-- SNS 사용 -->
   <div class="card">
-    <div class="card-title">SNS ì´ì© íí© <small>N=1,661</small></div>
+    <div class="card-title">SNS 이용 현황 <small>N=1,661</small></div>
     <div class="chart-wrap short"><canvas id="chartSNS"></canvas></div>
   </div>
 </div>
 
 <div class="grid-3">
-  <!-- íê²½ë¬¸ì  -->
+  <!-- 환경문제 -->
   <div class="card">
-    <div class="card-title">íê²½ ë¬¸ì  ëì ì°ì  ë¶ì¼</div>
-    <div class="rank-item"><div class="rank-num">1</div><div class="rank-text">ëê¸°ì¤ì¼ ê°ì </div><div class="rank-val">750</div></div>
-    <div class="rank-item"><div class="rank-num">2</div><div class="rank-text">íê¸°ë¬¼ ê´ë¦¬</div><div class="rank-val">423</div></div>
-    <div class="rank-item"><div class="rank-num">3</div><div class="rank-text">ë¹ì§ ì¡°ì±</div><div class="rank-val">212</div></div>
-    <div class="rank-item"><div class="rank-num">4</div><div class="rank-text">ìì§ ê°ì </div><div class="rank-val">92</div></div>
-    <div class="rank-item"><div class="rank-num">5</div><div class="rank-text">ììÂ·ì§ë</div><div class="rank-val">82</div></div>
+    <div class="card-title">환경 문제 대응 우선 분야</div>
+    <div class="rank-item"><div class="rank-num">1</div><div class="rank-text">대기오염 개선</div><div class="rank-val">750</div></div>
+    <div class="rank-item"><div class="rank-num">2</div><div class="rank-text">폐기물 관리</div><div class="rank-val">423</div></div>
+    <div class="rank-item"><div class="rank-num">3</div><div class="rank-text">녹지 조성</div><div class="rank-val">212</div></div>
+    <div class="rank-item"><div class="rank-num">4</div><div class="rank-text">수질 개선</div><div class="rank-val">92</div></div>
+    <div class="rank-item"><div class="rank-num">5</div><div class="rank-text">소음·진동</div><div class="rank-val">82</div></div>
   </div>
-  <!-- íì í¸ììì¤ -->
+  <!-- 필요 편의시설 -->
   <div class="card">
-    <div class="card-title">íì í¸ììì¤ ì°ì ìì</div>
-    <div class="rank-item"><div class="rank-num">1</div><div class="rank-text">ìë£ìì¤</div><div class="rank-val">653</div></div>
-    <div class="rank-item"><div class="rank-num">2</div><div class="rank-text">ì²´ì¡ìì¤</div><div class="rank-val">272</div></div>
-    <div class="rank-item"><div class="rank-num">3</div><div class="rank-text">í¸ìÂ·ë§í¸</div><div class="rank-val">201</div></div>
-    <div class="rank-item"><div class="rank-num">4</div><div class="rank-text">ê³µìÂ·ë¹ì§</div><div class="rank-val">145</div></div>
-    <div class="rank-item"><div class="rank-num">5</div><div class="rank-text">ëìê´</div><div class="rank-val">131</div></div>
+    <div class="card-title">필요 편의시설 우선순위</div>
+    <div class="rank-item"><div class="rank-num">1</div><div class="rank-text">의료시설</div><div class="rank-val">653</div></div>
+    <div class="rank-item"><div class="rank-num">2</div><div class="rank-text">체육시설</div><div class="rank-val">272</div></div>
+    <div class="rank-item"><div class="rank-num">3</div><div class="rank-text">편의·마트</div><div class="rank-val">201</div></div>
+    <div class="rank-item"><div class="rank-num">4</div><div class="rank-text">공원·녹지</div><div class="rank-val">145</div></div>
+    <div class="rank-item"><div class="rank-num">5</div><div class="rank-text">도서관</div><div class="rank-val">131</div></div>
   </div>
-  <!-- ëì/ì¬ê° -->
+  <!-- 독서/여가 -->
   <div class="card">
-    <div class="card-title">ëì Â· ì¬ê° Â· í¬ë§ìëì</div>
+    <div class="card-title">독서 · 여가 · 희망자녀수</div>
     <table class="data-table" style="margin-top:4px">
-      <tr><th>í­ëª©</th><th class="num">ê°</th><th>ë¹ê³ </th></tr>
-      <tr><td>ì°ê° ëìë</td><td class="num">2.5ê¶</td><td>ì¤ìê° 1ê¶</td></tr>
-      <tr><td>ì¬ê°íë ë§ì¡±ë</td><td class="num">2.80</td><td>5ì  ë§ì </td></tr>
-      <tr><td>í¬ë§ ìëì</td><td class="num">2.10ëª</td><td>0ëª 1.3%</td></tr>
-      <tr><td>íê·  ì£¼íë©´ì </td><td class="num">80.4ã¡</td><td>ì¤ìê° 80ã¡</td></tr>
-      <tr><td>íê·  ì°ë ¹</td><td class="num">58.2ì¸</td><td>ì¤ìê° 61ì¸</td></tr>
-      <tr><td>ì§ì ë³´ì ì¨</td><td class="num">57.8%</td><td>960ëª/1,661ëª</td></tr>
+      <tr><th>항목</th><th class="num">값</th><th>비고</th></tr>
+      <tr><td>연간 독서량</td><td class="num">2.5권</td><td>중앙값 1권</td></tr>
+      <tr><td>여가활동 만족도</td><td class="num">2.80</td><td>5점 만점</td></tr>
+      <tr><td>희망 자녀수</td><td class="num">2.10명</td><td>0명 1.3%</td></tr>
+      <tr><td>평균 주택면적</td><td class="num">80.4㎡</td><td>중앙값 80㎡</td></tr>
+      <tr><td>평균 연령</td><td class="num">58.2세</td><td>중앙값 61세</td></tr>
+      <tr><td>직업 보유율</td><td class="num">57.8%</td><td>960명/1,661명</td></tr>
     </table>
   </div>
 </div>
 
-<!-- SECTION 6: ì°ìë¨ì§ -->
-<div class="section-title">INDUSTRIAL COMPLEX â ì¬ì ì°ìë¨ì§ Â· ì²­ë ì ì±</div>
+<!-- SECTION 6: 산업단지 -->
+<div class="section-title">INDUSTRIAL COMPLEX — 여수 산업단지 · 청년 정책</div>
 <div class="grid-2">
   <div class="card">
-    <div class="card-title">ì¬ì ì°ìë¨ì§ ìí¥ ì¸ì <small>N=1,661</small></div>
+    <div class="card-title">여수 산업단지 영향 인식 <small>N=1,661</small></div>
     <div class="chart-wrap"><canvas id="chartIndustrial"></canvas></div>
   </div>
   <div class="card">
-    <div class="card-title">ë¸ì¸ ë¬¸ì  ì í <small>1ìì ìëµ Â· N=690</small></div>
+    <div class="card-title">노인 문제 유형 <small>1순위 응답 · N=690</small></div>
     <div class="chart-wrap"><canvas id="chartElderly"></canvas></div>
   </div>
 </div>
 
 <!-- FOOTER -->
 <div class="dashboard-footer">
-  ì¬ìì ì¬íì¡°ì¬ ëìë³´ë &mdash; ì ë¼ë¨ë ì¬íì¡°ì¬ ì¬ìì ë§ì´í¬ë¡ë°ì´í° ê¸°ë° &middot; ìëµì 1,661ëª &middot; Dashboard designed with data-ink ratio maximization
+  여수시 사회조사 대시보드 &mdash; 전라남도 사회조사 여수시 마이크로데이터 기반 &middot; 응답자 1,661명 &middot; Dashboard designed with data-ink ratio maximization
 </div>
 
 <script>
@@ -421,11 +421,11 @@ function barOpts(horizontal=false, stacked=false){
   };
 }
 
-// ì°ë ¹ë ë¶í¬
+// 연령대 분포
 new Chart(document.getElementById('chartAge'),{
   type:'bar',
   data:{
-    labels:['15~29ì¸','30ë','40ë','50ë','60ë','70+'],
+    labels:['15~29세','30대','40대','50대','60대','70+'],
     datasets:[{data:[123,180,184,286,400,488],backgroundColor:BLUE,borderRadius:4,barPercentage:.65}]
   },
   options:{...barOpts(), plugins:{...barOpts().plugins,
@@ -433,50 +433,700 @@ new Chart(document.getElementById('chartAge'),{
   }}
 });
 
-// ì±ë³ ëë
+// 성별 도넛
 new Chart(document.getElementById('chartGender'),{
   type:'doughnut',
   data:{
-    labels:['ë¨ì±','ì¬ì±'],
+    labels:['남성','여성'],
     datasets:[{data:[782,879],backgroundColor:[BLUE,GREEN],borderWidth:0,cutout:'62%'}]
   },
   options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}}}
 });
 
-// ê°êµ¬ìì
+// 가구�수
 new Chart(document.getElementById('chartHousehold'),{
   type:'bar',
   data:{
-    labels:['1ì¸','2ì¸','3ì¸','4ì¸','5ì¸+'],
+    labels:['1인','2인','3인','4인','5인+'],
     datasets:[{data:[446,774,283,114,44],backgroundColor:[BLUE,LIGHT_BLUE,'#4A90D9',GREEN,LIGHT_GREEN],borderRadius:4,barPercentage:.6}]
   },
   options:barOpts()
 });
 
-// í¼ì¸ìí
+// 혼인상태
 new Chart(document.getElementById('chartMarriage'),{
   type:'doughnut',
   data:{
-    labels:['ë¯¼í','ì ë°°ì°','ì¬ë³','ì´í'],
+    labels:['민혌','유배우','사별','이혌'],
     datasets:[{data:[241,1079,237,104],backgroundColor:[BLUE,GREEN,'#FF8C42','#6C5CE7'],borderWidth:0,cutout:'58%'}]
   },
   options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{font:{size:10},boxWidth:10,padding:8}}}}
 });
 
-// êµì¡ìì¤
+// 교육수준
 new Chart(document.getElementById('chartEdu'),{
   type:'bar',
   data:{
-    labels:['ë¬¼í','ì´ë±','ì¤í','ê³ ë±','ì ë¬¸ë','ëí','ìì¬','ë°ì¬'],
+    labels:['물학','초등','줐학','고등','전문대','대학','석사','박사'],
     datasets:[{data:[105,299,153,523,272,273,30,6],backgroundColor:BLUE,borderRadius:3,barPercentage:.65}]
   },
   options:barOpts()
 });
 
-// ìíê· ê°êµ¬ìë
+// 월평균가구소득
 new Chart(document.getElementById('chartIncome'),{
   type:'bar',
   data:{
-    labels:['100ë§\në¯¸ë§','100~\n200','200~\n300','300~\n400','400~\n500','500~\n600','600~\n700','700~\n800','800~\n900','900ë§\nì´ì'],
-    datasets:[{data:[42,176,174,162,139,117,76,49,25,48],backgrf÷VæD6öÆ÷#¤$ÅTRÆ&÷&FW%&FW3£2Æ&%W&6VçFvS¢ãwÕÐ¢ÒÀ¢÷Föç3¦&$÷G2§Ò° ¢òòÈ+nºxÎÊ¸øB»hNØúÀ¦æWr6'BFö7VÖVçBævWDVÆVÖVçD'Bv6'DÆfU6BrÇ°¢GS¢v&"rÀ¢FF§°¢Æ&VÇ3¥²sÊ	rÂsrÂs"rÂs2rÂsBrÂsRrÂsbrÂsrrÂsrÂsrÂsuÒÀ¢FF6WG3¥°¢¶Æ&VÃ¢~È+nºxÎÊ¸øBrÆFF¥³RÃrÃbÃ3ÃcÃCsbÃ##2Ã3#"Ã#RÃCÃeÒÆ&6¶w&÷VæD6öÆ÷#¤$ÅTRÆ&÷&FW%&FW3£2Æ&%W&6VçFvS¢ãSWÒÀ¢¶Æ&VÃ¢~Ùh»;^¸øBrÆFF¥³Ã#Ã3ÃCÃÃCÃ#BÃ3Ã3rÃ#"ÃuÒÆ&6¶w&÷VæD6öÆ÷#¤u$TTâÆ&÷&FW%&FW3£2Æ&%W&6VçFvS¢ãSWÐ¢Ð¢ÒÀ¢÷Föç3§²ââæ&$÷G2ÇÇVvç3§¶ÆVvVæC§¶F7Æ§G'VRÇ÷6Föã¢wF÷rÆÆ&VÇ3§¶föçC§·6¦S£ÒÆ&÷vGF£"ÇFFæs£×××Ð§Ò° ¢òòÉ{º¸È»8BÈ+ÎºxÎÊ¸øBþÙh»;^¸øBþ«^Ê	^¸ø@¦æWr6'BFö7VÖVçBævWDVÆVÖVçD'Bv6'DvUvVÆÆ&VærrÇ°¢GS¢vÆæRrÀ¢FF§°¢Æ&VÇ3¥²sWã#ÈKrÂs3¸ÈrÂsC¸ÈrÂsS¸ÈrÂsc¸ÈrÂss²uÒÀ¢FF6WG3¥°¢¶Æ&VÃ¢~È+bºxÎÊ¸øBrÆFF¥³bãc2ÃrãÃbãÃbãCRÃbãCBÃbã3%ÒÆ&÷&FW$6öÆ÷#¤$ÅTRÆ&6¶w&÷VæD6öÆ÷#¤$ÅTR²s32rÇFVç6öã¢ã2ÇöçE&FW3£BÆ&÷&FW%vGF£"ãRÆfÆÃ¦fÇ6WÒÀ¢¶Æ&VÃ¢~Ùh»;^¸øBrÆFF¥³bã32ÃbãBÃbã"ÃbãCBÃbãC"ÃbãuÒÆ&÷&FW$6öÆ÷#¤u$TTâÆ&6¶w&÷VæD6öÆ÷#¤u$TTâ²s32rÇFVç6öã¢ã2ÇöçE&FW3£BÆ&÷&FW%vGF£"ãRÆfÆÃ¦fÇ6WÒÀ¢¶Æ&VÃ¢~«^Ê	^¸øBrÆFF¥³BãÃBãCrÃBã3BÃBãBÃBãCÃBãS%ÒÆ&÷&FW$6öÆ÷#¢r4dc3C"rÆ&6¶w&÷VæD6öÆ÷#¢r4dc3C"r²s32rÇFVç6öã¢ã2ÇöçE&FW3£BÆ&÷&FW%vGF£"Æ&÷&FW$F6¥³RÃ5ÒÆfÆÃ¦fÇ6WÐ¢Ð¢ÒÀ¢÷Föç3§·&W7öç6fS§G'VRÆÖçFä7V7E&Fó¦fÇ6RÀ¢ÇVvç3§¶ÆVvVæC§¶F7Æ§G'VRÇ÷6Föã¢wF÷rÆÆ&VÇ3§¶föçC§·6¦S£ÒÆ&÷vGF£"ÇFFæs£××ÒÀ¢66ÆW3§·§¶Öã£2ãRÆÖ£rãRÆw&C§¶6öÆ÷#¢r6cc6cRw×ÒÇ§¶w&C§¶F7Æ¦fÇ6W××Ð¢Ð§Ò° ¢òòÉzÎÈÈ9ÞÙÎºxÎÊ¸øBÈØø»	B¦æWr6'BFö7VÖVçBævWDVÆVÖVçD'Bv6'EV÷7U6BrÇ°¢GS¢v&"rÀ¢FF§°¢Æ&VÇ3¥²~ÊxÉzÞ«+ÞÊ	ÂrÂ~«H«IÉzÎ«BrÂ~«YØkRrÂ~Ê;ÎË
-ÉêRrÂ~¸[ÊxÙ«+ÒuÒÀ¢FF6WG3¥·¶FF¥³2ãcÃ2ã3BÃ2ãRÃ2ãÃ"ãÒÆ&6¶w&÷VæD6öÆ÷#¥´$ÅTRÄÄtEô$ÅTRÂr3DCrÄu$TTâÄÄtEôu$TTåÒÆ&÷&FW%&FW3£BÆ&%W&6VçFvS¢ãSWÕÐ¢ÒÀ¢÷Föç3§²ââæ&$÷G2G'VRÇ66ÆW3§·§¶Öã£ÆÖ£RÆw&C§¶6öÆ÷#¢r6cc6cRwÒÇF6·3§¶föçC§·6¦S£××ÒÇ§¶w&C§¶F7Æ¦fÇ6WÒÇF6·3§¶föçC§·6¦S£××××Ð§Ò° ¢òò«YØk^È¸ººxÎÊ¸ø@¦æWr6'BFö7VÖVçBævWDVÆVÖVçD'Bv6'EG&ç7÷'BrÇ°¢GS¢w&F"rÀ¢FF§°¢Æ&VÇ3¥²~È¹Î¸+N»(NÈªBrÂ~Ø9ÞÈ¹ÂuÒÀ¢FF6WG3¥·¶FF¥³2ãcÃ2ãÃ2ãc5ÒÆ&6¶w&÷VæD6öÆ÷#¤$ÅTR²s32rÆ&÷&FW$6öÆ÷#¤$ÅTRÆ&÷&FW%vGF£"ÇöçE&FW3£BÇöçD&6¶w&÷VæD6öÆ÷#¤$ÅTWÕÐ¢ÒÀ¢÷Föç3§·&W7öç6fS§G'VRÆÖçFä7V7E&Fó¦fÇ6RÀ¢66ÆW3§·#§¶Öã£2ÆÖ£Bã"ÇF6·3§·7FW6¦S¢ã2ÆföçC§·6¦S£×ÒÆw&C§¶6öÆ÷#¢r6FVS&SbwÒÆævÆTÆæW3§¶6öÆ÷#¢r6FVS&SbwÒÇöçDÆ&VÇ3§¶föçC§·6¦S£×××ÒÀ¢ÇVvç3§¶ÆVvVæC§¶F7Æ¦fÇ6W×Ð¢Ð§Ò° ¢òò»;^ÊxºxÎÊ¸ø@¦æWr6'BFö7VÖVçBævWDVÆVÖVçD'Bv6'EvVÆf&RrÇ°¢GS¢v&"rÀ¢FF§°¢Æ&VÇ3¥²~»;NÙ¸Ê	^ËRrÂ~ËzÉ[Þ«8NËRrÂ~Éê^ÉZÉÛ»;NÊxrÂ~ÉXN¸ù»;NÊxrÂ~¸[ÉÛ»;NÊxuÒÀ¢FF6WG3¥·¶FF¥³2ãÃ2ã3Ã2ãÃ2ã#Ã2ãEÒÆ&6¶w&÷VæD6öÆ÷#¥´$ÅTRÄÄtEô$ÅTRÂr3DCrÄu$TTâÄÄtEôu$TTåÒÆ&÷&FW%&FW3£BÆ&%W&6VçFvS¢ãSWÕÐ¢ÒÀ¢÷Föç3§²ââæ&$÷G2G'VRÇ66ÆW3§·§¶Öã£ÆÖ£RÆw&C§¶6öÆ÷#¢r6cc6cRw×ÒÇ§¶w&C§¶F7Æ¦fÇ6WÒÇF6·3§¶föçC§·6¦S£××××Ð§Ò° ¢òòÉ{º¸È»8B«Ê;ÎÉÙÙjP¦æWr6'BFö7VÖVçBævWDVÆVÖVçD'Bv6'E&W6FVæ6RrÇ°¢GS¢v&"rÀ¢FF§°¢Æ&VÇ3¥²sWã#ÈKrÂs3¸ÈrÂsC¸ÈrÂsS¸ÈrÂsc¸ÈrÂss²uÒÀ¢FF6WG3¥·¶FF¥³2ãrÃ2ãSÃ2ãÃ2ãRÃBã"ÃBãC5ÒÆ&6¶w&÷VæD6öÆ÷#¥ÄUEDRç6Æ6RÃbÆ&÷&FW%&FW3£BÆ&%W&6VçFvS¢ãSWÕÐ¢ÒÀ¢÷Föç3§²ââæ&$÷G2Ç66ÆW3§·§¶Öã£ÆÖ£RÆw&C§¶6öÆ÷#¢r6cc6cRw×ÒÇ§¶w&C§¶F7Æ¦fÇ6W×××Ð§Ò° ¢òòÉ{º¸È»8BÈhÎ¹9Ð¦æWr6'BFö7VÖVçBævWDVÆVÖVçD'Bv6'Dæ6öÖTvRrÇ°¢GS¢v&"rÀ¢FF§°¢Æ&VÇ3¥²sWã#ÈKrÂs3¸ÈrÂsC¸ÈrÂsS¸ÈrÂsc¸ÈrÂss²uÒÀ¢FF6WG3¥·¶FF¥³2ãÃRãRÃbãsÃRãrÃBãcÃ"ãÒÆ&6¶w&÷VæD6öÆ÷#¥´$ÅTRÄÄtEô$ÅTRÂr3DCrÄu$TTâÄÄtEôu$TTâÂr4dc3C"uÒÆ&÷&FW%&FW3£BÆ&%W&6VçFvS¢ãSWÕÐ¢ÒÀ¢÷Föç3§²ââæ&$÷G2Ç66ÆW3§·§¶Öã£ÆÖ£Æw&C§¶6öÆ÷#¢r6cc6cRw×ÒÇ§¶w&C§¶F7Æ¦fÇ6W×××Ð§Ò° ¢òòÈhÎ¹9ÞºxÎÊ¸ø@¦æWr6'BFö7VÖVçBævWDVÆVÖVçD'Bv6'Dæ6öÖU6BrÇ°¢GS¢v&"rÀ¢FF§°¢Æ&VÇ3¥²~ºzNÉ«»hºxÎÊrÂ~»hºxÎÊrÂ~»;NØkRrÂ~ºxÎÊrÂ~ºzNÉ«ºxÎÊuÒÀ¢FF6WG3¥·¶FF¥³cRÃCrÃssÃBÃ35ÒÆ&6¶w&÷VæD6öÆ÷#¥´$ÅTRÄÄtEô$ÅTRÂr6FVS&SbrÄu$TTâÄÄtEôu$TTåÒÆ&÷&FW%&FW3£2Æ&%W&6VçFvS¢ãgÕÐ¢ÒÀ¢÷Föç3¦&$÷G2§Ò° ¢òòÉÛÎÉéºjÂËj»hNÊ	^¸ø@¦æWr6'BFö7VÖVçBævWDVÆVÖVçD'Bv6'D¦ö%7Vff6Væ7rÇ°¢GS¢v&"rÀ¢FF§°¢Æ&VÇ3¥²~ºzNÉ«»hÊrÂ~»hÊrÂ~»;NØkRrÂ~Ëj»hBrÂ~ºzNÉ«Ëj»hBuÒÀ¢FF6WG3¥·¶FF¥³bÃCcBÃsSbÃ#srÃsÒÆ&6¶w&÷VæD6öÆ÷#¥²r4SsD342rÂr4dc3C"rÂr6FVS&SbrÄu$TTâÄÄtEôu$TTåÒÆ&÷&FW%&FW3£2Æ&%W&6VçFvS¢ãgÕÐ¢ÒÀ¢÷Föç3¦&$÷G2§Ò° ¢òòÈhÎ»NÉê^ÈhÀ¦æWr6'BFö7VÖVçBævWDVÆVÖVçD'Bv6'E6÷ærrÇ°¢GS¢vF÷VvçWBrÀ¢FF§°¢Æ&VÇ3¥²~ÊNØk^È¹ÎÉêRrÂ~¸ÈÙ^ºxØ«rÂ~ÈhÎ«yÎºªºxØ«rÂ~É¹ÛÎÉÛÈ{ÎÙYrÂ~»ÙNÊ	rÂ~ØëÉÙÊ	rÂ~«Ø8uÒÀ¢FF6WG3¥·¶FF¥³CC2ÃCsÃ3#"Ã#CRÃ3Ã#Ã5ÒÆ&6¶w&÷VæD6öÆ÷#¥ÄUEDRç6Æ6RÃrÆ&÷&FW%vGF£Æ7WF÷WC¢sSRRwÕÐ¢ÒÀ¢÷Föç3§·&W7öç6fS§G'VRÆÖçFä7V7E&Fó¦fÇ6RÇÇVvç3§¶ÆVvVæC§·÷6Föã¢w&vBrÆÆ&VÇ3§¶föçC§·6¦S£ãWÒÆ&÷vGF£ÇFFæs£g×××Ð§Ò° ¢òòÉ[Î«NÉXÊ@¦æWr6'BFö7VÖVçBævWDVÆVÖVçD'Bv6'DævE6fWGrÇ°¢GS¢v&"rÀ¢FF§°¢Æ&VÇ3¥²~ºzNÉ«ÉXÊBrÂ~ÉXÊBrÂ~»;NØkRrÂ~»hÉXrÂ~ºzNÉ«»hÉXuÒÀ¢FF6WG3¥·¶FF¥³2ÃSBÃSÃccBÃ#3ÒÆ&6¶w&÷VæD6öÆ÷#¥´ÄtEôu$TTâÄu$TTâÂr6FVS&SbrÂr4dc3C"rÂr4SsD342uÒÆ&÷&FW%&FW3£2Æ&%W&6VçFvS¢ãgÕÐ¢ÒÀ¢÷Föç3¦&$÷G2§Ò° ¢òòØù«ºËÂºxÎÊ¸ø@¦æWr6'BFö7VÖVçBævWDVÆVÖVçD'Bv6'Ev7FRrÇ°¢GS¢v&"rÀ¢FF§°¢Æ&VÇ3¥²~È9ÞÙÎØù«ºËÂrÂ~ÉØÎÈ¹ÞºËÎÉ;º«rÂ~ÉêÎÙÎÉªØù«ºËÂuÒÀ¢FF6WG3¥·¶FF¥³"ãCrÃ"ãCRÃ"ãSÒÆ&6¶w&÷VæD6öÆ÷#¥´$ÅTRÄÄtEô$ÅTRÄu$TTåÒÆ&÷&FW%&FW3£BÆ&%W&6VçFvS¢ãWÕÐ¢ÒÀ¢÷Föç3§²ââæ&$÷G2Ç66ÆW3§·§¶Öã£ÆÖ£RÆw&C§¶6öÆ÷#¢r6cc6cRw×ÒÇ§¶w&C§¶F7Æ¦fÇ6W×××Ð§Ò° ¢òò4å0¦æWr6'BFö7VÖVçBævWDVÆVÖVçD'Bv6'E4å2rÇ°¢GS¢vF÷VvçWBrÀ¢FF§°¢Æ&VÇ3¥²~ÉÛNÉªrÂ~ºûÉÛNÉªuÒÀ¢FF6WG3¥·¶FF¥³"ÃcSÒÆ&6¶w&÷VæD6öÆ÷#¥´$ÅTRÂr6FVS&SbuÒÆ&÷&FW%vGF£Æ7WF÷WC¢scRwÕÐ¢ÒÀ¢÷Föç3§·&W7öç6fS§G'VRÆÖçFä7V7E&Fó¦fÇ6RÇÇVvç3§¶ÆVvVæC§·÷6Föã¢w&vBrÆÆ&VÇ3§¶föçC§·6¦S£ÒÆ&÷vGF£"ÇFFæs£×××Ð§Ò° ¢òòÈ+ÎÉx^¸ºÊxÉÙjP¦æWr6'BFö7VÖVçBævWDVÆVÖVçD'Bv6'DæGW7G&ÂrÇ°¢GS¢v&"rÀ¢FF§°¢Æ&VÇ3¥²~ºzNÉ««ÞÊ	RrÂ~«ÞÊ	RrÂ~»;NØkRrÂ~»hÊ	RrÂ~ºzNÉ«»hÊ	RrÂ~ºªºhBuÒÀ¢FF6WG3¥·¶FF¥³#sRÃcsÃS2ÃÃ"ÃÒÆ&6¶w&÷VæD6öÆ÷#¥´u$TTâÄÄtEôu$TTâÂr6FVS&SbrÂr4dc3C"rÂr4SsD342rÄu$ÒÆ&÷&FW%&FW3£2Æ&%W&6VçFvS¢ãgÕÐ¢ÒÀ¢÷Föç3¦&$÷G2§Ò° ¢òò¸[ÉÛºËÊ	À¦æWr6'BFö7VÖVçBævWDVÆVÖVçD'Bv6'DVÆFW&ÇrÇ°¢GS¢v&"rÀ¢FF§°¢Æ&VÇ3¥²~«N«	^ºËÊ	ÂrÂ~ÈhÎ¹9Þ»hÊrÂ~ÈhÎÉ«	rÂ~ÉÛÎÉéºjÂrÂ~«Ø8uÒÀ¢FF6WG3¥·¶FF¥³#sBÃ#s2ÃÃ3"Ã3ÒÆ&6¶w&÷VæD6öÆ÷#¥´$ÅTRÄu$TTâÂr4dc3C"rÄÄtEô$ÅTRÄu$ÒÆ&÷&FW%&FW3£BÆ&%W&6VçFvS¢ãSWÕÐ¢ÒÀ¢÷Föç3§²ââæ&$÷G2G'VRÇ66ÆW3§·§¶w&C§¶6öÆ÷#¢r6cc6cRw×ÒÇ§¶w&C§¶F7Æ¦fÇ6WÒÇF6·3§¶föçC§·6¦S£××××Ð§Ò°£Â÷67&Cà£Âö&öGà£ÂöFÖÃà
+    labels:['100만\n미만','100~\n200','200~\n300','300~\n400','400~\n500','500~\n600','600~\n700','700~\n800','800~\n900','900만\n이상'],
+    datasets:[{data:[42,176,174,162,139,117,76,49,25,48],backgrf�V�D6���#�$�TR�&�&FW%&F�W3�2�&%W&6V�FvS��w�Т����F���3�&$�G2���ғ������+n�x����B�hN�����Wr6�'B�F�7V�V�B�vWDV�V�V�D'��B�v6�'DƖfU6Br�ǰ�G�S�v&"r��FF����&V�3��s�	r�sr�s"r�s2r�sBr�sRr�sbr�srr�s�r�s�r�su���FF6WG3�����&Vâ~�+n�x����Br�FF��R�r�b�3�c�Csb�##2�3#"�#�R�CÓe��&6�w&�V�D6���#�$�TR�&�&FW%&F�W3�2�&%W&6V�FvS��SW�����&Vâ~�h��;^��Br�FF����#�3��C�Ã�C��#B�3��3r�#"Óu��&6�w&�V�D6���#�u$TT��&�&FW%&F�W3�2�&%W&6V�FvS��SWТТ����F���3�����&$�G2����Vv��3���VvV�C��F�7���G'VR��6�F���wF�r��&V�3��f��C��6��S���&��v�GF��"�FF��s����Чғ������{�����8B�+κx����B��h��;^��B��^�	^��@��Wr6�'B�F�7V�V�B�vWDV�V�V�D'��B�v6�'DvUvV��&V��rr�ǰ�G�S�vƖ�Rr��FF����&V�3��sW�#��K�r�s3��r�sC��r�sS��r�sc��r�ss�u���FF6WG3�����&Vâ~�+b�x����Br�FF��b�c2�r��b��b�CR�b�CB�b�3%��&�&FW$6���#�$�TR�&6�w&�V�D6���#�$�TR�s32r�FV�6����2����E&F�W3�B�&�&FW%v�GF��"�R�f��æf�6W�����&Vâ~�h��;^��Br�FF��b�32�b�B�b�"�b�CB�b�C"�b�u��&�&FW$6���#�u$TT��&6�w&�V�D6���#�u$TT�s32r�FV�6����2����E&F�W3�B�&�&FW%v�GF��"�R�f��æf�6W�����&Vâ~�^�	^��Br�FF��B㓂�B�Cr�B�3B�B�B�B�C��B�S%��&�&FW$6���#�r4dc�3C"r�&6�w&�V�D6���#�r4dc�3C"r�s32r�FV�6����2����E&F�W3�B�&�&FW%v�GF��"�&�&FW$F6���R�5��f��æf�6WТТ����F���3��&W7��6�fS�G'VR����F��7V7E&F��f�6R���Vv��3���VvV�C��F�7���G'VR��6�F���wF�r��&V�3��f��C��6��S���&��v�GF��"�FF��s������66�W3�����֖�2�R����r�R�w&�C��6���#�r6cc6cRw��ǃ��w&�C��F�7���f�6W��ТЧғ������z�ȉ��9�ٙκx����B�ȉ�����	B���Wr6�'B�F�7V�V�B�vWDV�V�V�D'��B�v6�'E�V�7U6Br�ǰ�G�S�v&"r��FF����&V�3��~�x�zޫ+��	�r�~�H�I�zΫBr�~�Y�kRr�~�;��
+���Rr�~�[��xٙ��+�u���FF6WG3���FF��2�c��2�3B�2�R�2��"フ��&6�w&�V�D6���#��$�TR�Ĕt�E�$�TR�r3D�C�r�u$TT��Ĕt�E�u$TT���&�&FW%&F�W3�B�&%W&6V�FvS��SW�Т����F���3�����&$�G2�G'VR��66�W3�����֖�����R�w&�C��6���#�r6cc6cRw��F�6�3��f��C��6��S����Ǔ��w&�C��F�7���f�6W��F�6�3��f��C��6��S�����Чғ������Y�k^ȉ�����x����@��Wr6�'B�F�7V�V�B�vWDV�V�V�D'��B�v6�'EG&�7�'Br�ǰ�G�S�w&F"r��FF����&V�3��~ȹθ+N�(NȪBr�~�9�ȹ�u���FF6WG3���FF��2�c��2��2�c5��&6�w&�V�D6���#�$�TR�s32r�&�&FW$6���#�$�TR�&�&FW%v�GF��"����E&F�W3�B����D&6�w&�V�D6���#�$�TW�Т����F���3��&W7��6�fS�G'VR����F��7V7E&F��f�6R��66�W3��#��֖�2����B�"�F�6�3��7FW6��S��2�f��C��6��S�����w&�C��6���#�r6FVS&Sbw���v�TƖ�W3��6���#�r6FVS&Sbw�����D�&V�3��f��C��6��S��������Vv��3���VvV�C��F�7���f�6W�ТЧғ������;^�x�x����@��Wr6�'B�F�7V�V�B�vWDV�V�V�D'��B�v6�'EvV�f&Rr�ǰ�G�S�v&"r��FF����&V�3��~�;Nٸ��	^�Rr�~�z��[ޫ8NˋRr�~��^�Z�ێ�;N�xr�~�XN����;N�xr�~�[��ێ�;N�xu���FF6WG3���FF��2��2�3�2���2�#�2�E��&6�w&�V�D6���#��$�TR�Ĕt�E�$�TR�r3D�C�r�u$TT��Ĕt�E�u$TT���&�&FW%&F�W3�B�&%W&6V�FvS��SW�Т����F���3�����&$�G2�G'VR��66�W3�����֖�����R�w&�C��6���#�r6cc6cRw��Ǔ��w&�C��F�7���f�6W��F�6�3��f��C��6��S�����Чғ������{�����8B��;��َ�jP��Wr6�'B�F�7V�V�B�vWDV�V�V�D'��B�v6�'E&W6�FV�6Rr�ǰ�G�S�v&"r��FF����&V�3��sW�#��K�r�s3��r�sC��r�sS��r�sc��r�ss�u���FF6WG3���FF��2�r�2�S��2��2�R�B�"�B�C5��&6�w&�V�D6���#��UEDR�6Ɩ6R��b��&�&FW%&F�W3�B�&%W&6V�FvS��SW�Т����F���3�����&$�G2���66�W3�����֖�����R�w&�C��6���#�r6cc6cRw��ǃ��w&�C��F�7���f�6W���Чғ������{�����8B�hι9Ц�Wr6�'B�F�7V�V�B�vWDV�V�V�D'��B�v6�'D��6��TvRr�ǰ�G�S�v&"r��FF����&V�3��sW�#��K�r�s3��r�sC��r�sS��r�sc��r�ss�u���FF6WG3���FF��2��R�R�b�s��R�r�B�c��"ヅ��&6�w&�V�D6���#��$�TR�Ĕt�E�$�TR�r3D�C�r�u$TT��Ĕt�E�u$TT��r4dc�3C"u��&�&FW%&F�W3�B�&%W&6V�FvS��SW�Т����F���3�����&$�G2���66�W3�����֖�������w&�C��6���#�r6cc6cRw��ǃ��w&�C��F�7���f�6W���Чғ������hι9޺x����@��Wr6�'B�F�7V�V�B�vWDV�V�V�D'��B�v6�'D��6��U6Br�ǰ�G�S�v&"r��FF����&V�3��~�zNɫ�h��x��r�~�h��x��r�~�;N�kRr�~�x��r�~�zNɫ�x��u���FF6WG3���FF��cR�Cr�ss��B�35��&6�w&�V�D6���#��$�TR�Ĕt�E�$�TR�r6FVS&Sbr�u$TT��Ĕt�E�u$TT���&�&FW%&F�W3�2�&%W&6V�FvS��g�Т����F���3�&$�G2���ғ�����������j��j��hN�	^��@��Wr6�'B�F�7V�V�B�vWDV�V�V�D'��B�v6�'D��%7Vff�6�V�7�r�ǰ�G�S�v&"r��FF����&V�3��~�zNɫ�h�r�~�h�r�~�;N�kRr�~�j��hBr�~�zNɫ�j��hBu���FF6WG3���FF���b�CcB�sSb�#sr�s���&6�w&�V�D6���#��r4SsD342r�r4dc�3C"r�r6FVS&Sbr�u$TT��Ĕt�E�u$TT���&�&FW%&F�W3�2�&%W&6V�FvS��g�Т����F���3�&$�G2���ғ������hλ�N��^�h���Wr6�'B�F�7V�V�B�vWDV�V�V�D'��B�v6�'E6����rr�ǰ�G�S�vF�Vv��WBr��FF����&V�3��~�N�k^ȹ���Rr�~��ى^�x�ث�r�~�hΫyκ���x�ث�r�~Ɋ�����ێ�{��Yr�~�ٙN�	r�~���َ�	r�~���8u���FF6WG3���FF��CC2�Cs�3#"�#CR�3��#��5��&6�w&�V�D6���#��UEDR�6Ɩ6R��r��&�&FW%v�GF���7WF�WC�sSRRw�Т����F���3��&W7��6�fS�G'VR����F��7V7E&F��f�6R��Vv��3���VvV�C���6�F���w&�v�Br��&V�3��f��C��6��S���W��&��v�GF���FF��s�g���Чғ������[ΫN�X��@��Wr6�'B�F�7V�V�B�vWDV�V�V�D'��B�v6�'D�v�E6fWG�r�ǰ�G�S�v&"r��FF����&V�3��~�zNɫ�X��Br�~�X��Br�~�;N�kRr�~�h��X�r�~�zNɫ�h��X�u���FF6WG3���FF��2�SB�S��ccB�#3���&6�w&�V�D6���#��Ĕt�E�u$TT��u$TT��r6FVS&Sbr�r4dc�3C"r�r4SsD342u��&�&FW%&F�W3�2�&%W&6V�FvS��g�Т����F���3�&$�G2���ғ�������������x����@��Wr6�'B�F�7V�V�B�vWDV�V�V�D'��B�v6�'Ev7FRr�ǰ�G�S�v&"r��FF����&V�3��~�9�ٙ��������r�~���ȹ޺���;����r�~���ٙ�ɪ��������u���FF6WG3���FF��"�Cr�"�CR�"�S��&6�w&�V�D6���#��$�TR�Ĕt�E�$�TR�u$TT���&�&FW%&F�W3�B�&%W&6V�FvS��W�Т����F���3�����&$�G2���66�W3�����֖�����R�w&�C��6���#�r6cc6cRw��ǃ��w&�C��F�7���f�6W���Чғ�����4�0��Wr6�'B�F�7V�V�B�vWDV�V�V�D'��B�v6�'E4�2r�ǰ�G�S�vF�Vv��WBr��FF����&V�3��~��Nɪ�r�~�����Nɪ�u���FF6WG3���FF��"�cS���&6�w&�V�D6���#��$�TR�r6FVS&Sbu��&�&FW%v�GF���7WF�WC�scRw�Т����F���3��&W7��6�fS�G'VR����F��7V7E&F��f�6R��Vv��3���VvV�C���6�F���w&�v�Br��&V�3��f��C��6��S���&��v�GF��"�FF��s����Чғ������+��x^����xɈ�jP��Wr6�'B�F�7V�V�B�vWDV�V�V�D'��B�v6�'D��GW7G&��r�ǰ�G�S�v&"r��FF����&V�3��~�zNɫ����	Rr�~����	Rr�~�;N�kRr�~�h�	Rr�~�zNɫ�h�	Rr�~����hBu���FF6WG3���FF��#sR�cs�S2��"Ó��&6�w&�V�D6���#��u$TT��Ĕt�E�u$TT��r6FVS&Sbr�r4dc�3C"r�r4SsD342r�u$���&�&FW%&F�W3�2�&%W&6V�FvS��g�Т����F���3�&$�G2���ғ������[��ێ�ˎ�	���Wr6�'B�F�7V�V�B�vWDV�V�V�D'��B�v6�'DV�FW&ǒr�ǰ�G�S�v&"r��FF����&V�3��~�N�	^�ˎ�	�r�~�hι9޻h�r�~�h�ɛ��	r�~������j�r�~���8u���FF6WG3���FF��#sB�#s2Ã�3"�3��&6�w&�V�D6���#��$�TR�u$TT��r4dc�3C"r�Ĕt�E�$�TR�u$���&�&FW%&F�W3�B�&%W&6V�FvS��SW�Т����F���3�����&$�G2�G'VR��66�W3�����w&�C��6���#�r6cc6cRw��Ǔ��w&�C��F�7���f�6W��F�6�3��f��C��6��S�����Чғ����67&�C���&�G�����F���
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>여수시 사회조사 통계 대시보드</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:100%;overflow-x:hidden;overflow-y:auto}
+body{
+  font-family:'Noto Sans KR',sans-serif;
+  background:#FAFBFC;
+  color:#212529;
+  line-height:1.5;
+}
+
+/* HEADER */
+.dashboard-header{
+  background:linear-gradient(135deg,#0056B3 0%,#003d80 100%);
+  color:#fff;padding:28px 48px;display:flex;align-items:center;justify-content:space-between;
+}
+.dashboard-header h1{font-size:26px;font-weight:700;letter-spacing:-0.5px}
+.dashboard-header .subtitle{font-size:13px;font-weight:300;opacity:.85;margin-top:2px}
+.header-meta{text-align:right;font-size:12px;opacity:.8;line-height:1.7}
+.header-meta span{display:block}
+
+/* KPI ROW */
+.kpi-row{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:16px;
+  padding:24px 48px;
+}
+.kpi-card{
+  background:#fff;border-radius:10px;padding:20px 22px;
+  box-shadow:0 1px 4px rgba(0,0,0,.06);
+  border-top:3px solid #0056B3;
+  position:relative;
+}
+.kpi-card.green{border-top-color:#28A745}
+.kpi-card .kpi-label{font-size:11.5px;color:#6c757d;font-weight:500;text-transform:uppercase;letter-spacing:.5px}
+.kpi-card .kpi-value{font-size:32px;font-weight:700;color:#212529;margin:6px 0 2px;font-variant-numeric:tabular-nums}
+.kpi-card .kpi-sub{font-size:11px;color:#868e96}
+
+/* SECTION */
+.section-title{
+  font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;
+  color:#0056B3;padding:0 48px;margin:28px 0 14px;
+}
+.section-title::before{content:'';display:inline-block;width:4px;height:14px;background:#0056B3;border-radius:2px;margin-right:8px;vertical-align:middle}
+
+/* GRID */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:0 48px;margin-bottom:16px}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;padding:0 48px;margin-bottom:16px}
+.grid-23{display:grid;grid-template-columns:2fr 1fr;gap:16px;padding:0 48px;margin-bottom:16px}
+.grid-32{display:grid;grid-template-columns:1fr 2fr;gap:16px;padding:0 48px;margin-bottom:16px}
+.grid-4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:16px;padding:0 48px;margin-bottom:16px}
+
+/* CARD */
+.card{
+  background:#fff;border-radius:10px;padding:22px 24px;
+  box-shadow:0 1px 4px rgba(0,0,0,.06);
+}
+.card-title{font-size:13px;font-weight:700;color:#343a40;margin-bottom:14px;letter-spacing:-.2px}
+.card-title small{font-weight:400;color:#868e96;font-size:11px;margin-left:6px}
+
+/* CHART CONTAINER */
+.chart-wrap{position:relative;width:100%;height:220px}
+.chart-wrap.tall{height:280px}
+.chart-wrap.short{height:180px}
+
+/* TABLE STYLE */
+.data-table{width:100%;border-collapse:collapse;font-size:12px}
+.data-table th{text-align:left;padding:8px 10px;border-bottom:2px solid #dee2e6;font-weight:600;color:#495057;font-size:11px;text-transform:uppercase;letter-spacing:.3px}
+.data-table td{padding:7px 10px;border-bottom:1px solid #f1f3f5;color:#495057}
+.data-table tr:last-child td{border-bottom:none}
+.data-table .num{text-align:right;font-variant-numeric:tabular-nums;font-weight:500}
+
+/* HORIZONTAL BAR (pure CSS) */
+.hbar{margin-bottom:10px}
+.hbar-label{display:flex;justify-content:space-between;font-size:11.5px;color:#495057;margin-bottom:3px}
+.hbar-track{height:20px;background:#f1f3f5;border-radius:4px;overflow:hidden}
+.hbar-fill{height:100%;border-radius:4px;transition:width .6s ease}
+
+/* BADGE */
+.badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:600}
+.badge-blue{background:#e7f1ff;color:#0056B3}
+.badge-green{background:#e6f9ed;color:#28A745}
+.badge-gray{background:#f1f3f5;color:#868e96}
+
+/* FOOTER */
+.dashboard-footer{
+  text-align:center;padding:20px 48px 32px;font-size:11px;color:#adb5bd;
+  margin-top:20px;
+}
+
+/* GAUGE */
+.gauge-container{display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center}
+.gauge-item{text-align:center;width:100px}
+.gauge-circle{
+  width:80px;height:80px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;font-weight:700;margin:0 auto 6px;
+  position:relative;
+}
+.gauge-circle::after{
+  content:'/ 10';font-size:10px;font-weight:400;color:#868e96;
+  position:absolute;bottom:-2px;right:8px;
+}
+.gauge-name{font-size:11px;color:#495057;font-weight:500}
+
+/* DONUT LEGEND */
+.donut-legend{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:10px;font-size:11px;color:#495057}
+.donut-legend span{display:flex;align-items:center;gap:4px}
+.donut-legend i{width:10px;height:10px;border-radius:2px;display:inline-block}
+
+/* RANKING */
+.rank-item{display:flex;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid #f8f9fa}
+.rank-num{width:22px;height:22px;border-radius:50%;background:#0056B3;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.rank-item:nth-child(n+4) .rank-num{background:#dee2e6;color:#495057}
+.rank-text{font-size:12px;flex:1}
+.rank-val{font-size:12px;font-weight:600;color:#0056B3;font-variant-numeric:tabular-nums}
+
+.pad-bottom{padding-bottom:8px}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="dashboard-header">
+  <div>
+    <h1>여수시 사회조사 통계 대시보드</h1>
+    <div class="subtitle">전라남도 사회조사 — 여수시 응답자 마이크로데이터 분석</div>
+  </div>
+  <div class="header-meta">
+    <span>총 응답자 <b>1,661</b>명</span>
+    <span>조사항목 <b>208</b>개 변수</span>
+    <span>출처 : 전라남도 사회조사</span>
+  </div>
+</div>
+
+<!-- KPI ROW -->
+<div class="kpi-row">
+  <div class="kpi-card">
+    <div class="kpi-label">삶의 만족도</div>
+    <div class="kpi-value">6.53</div>
+    <div class="kpi-sub">10점 만점 · 전체 평균</div>
+  </div>
+  <div class="kpi-card green">
+    <div class="kpi-label">행복 지수</div>
+    <div class="kpi-value">6.41</div>
+    <div class="kpi-sub">10점 만점 · 전체 평균</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-label">거주지역 만족도</div>
+    <div class="kpi-value">6.40</div>
+    <div class="kpi-sub">10점 만점 · 전체 평균</div>
+  </div>
+  <div class="kpi-card green">
+    <div class="kpi-label">여수 거주 의향</div>
+    <div class="kpi-value">76.6<span style="font-size:16px">%</span></div>
+    <div class="kpi-sub">긍정(4+5) 응답 비율</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-label">걱정 수준</div>
+    <div class="kpi-value">4.57</div>
+    <div class="kpi-sub">10점 만점 · 전체 평균</div>
+  </div>
+  <div class="kpi-card green">
+    <div class="kpi-label">평균 가구원 수</div>
+    <div class="kpi-value">2.09</div>
+    <div class="kpi-sub">1인 가구 26.8%</div>
+  </div>
+</div>
+
+<!-- SECTION 1: 인구통계 -->
+<div class="section-title">DEMOGRAPHICS — 인구통계 분석</div>
+<div class="grid-3">
+  <!-- 연령대 분포 -->
+  <div class="card">
+    <div class="card-title">연령대 분포 <small>N=1,661</small></div>
+    <div class="chart-wrap"><canvas id="chartAge"></canvas></div>
+  </div>
+  <!-- 성별 분포 -->
+  <div class="card">
+    <div class="card-title">성별 구성 <small>N=1,661</small></div>
+    <div class="chart-wrap"><canvas id="chartGender"></canvas></div>
+    <div style="text-align:center;margin-top:8px">
+      <span class="badge badge-blue">남성 782명 (47.1%)</span>
+      <span class="badge badge-green" style="margin-left:6px">여성 879명 (52.9%)</span>
+    </div>
+  </div>
+  <!-- 가구원수 -->
+  <div class="card">
+    <div class="card-title">가구원 수 분포 <small>N=1,661</small></div>
+    <div class="chart-wrap"><canvas id="chartHousehold"></canvas></div>
+  </div>
+</div>
+
+<div class="grid-3">
+  <!-- 혼인상태 -->
+  <div class="card">
+    <div class="card-title">혼인 상태 <small>N=1,661</small></div>
+    <div class="chart-wrap short"><canvas id="chartMarriage"></canvas></div>
+  </div>
+  <!-- 교육정도 -->
+  <div class="card">
+    <div class="card-title">교육 수준 <small>N=1,661</small></div>
+    <div class="chart-wrap short"><canvas id="chartEdu"></canvas></div>
+  </div>
+  <!-- 월평균가구소득 -->
+  <div class="card">
+    <div class="card-title">월평균 가구소득 <small>N=1,008 (응답자)</small></div>
+    <div class="chart-wrap short"><canvas id="chartIncome"></canvas></div>
+  </div>
+</div>
+
+<!-- SECTION 2: 삶의 질 -->
+<div class="section-title">QUALITY OF LIFE — 삶의 질 · 행복 · 만족도</div>
+<div class="grid-2">
+  <!-- 삶만족도 분포 -->
+  <div class="card">
+    <div class="card-title">삶의 만족도 분포 <small>0~10점 척도</small></div>
+    <div class="chart-wrap"><canvas id="chartLifeSat"></canvas></div>
+  </div>
+  <!-- 연령대별 삶만족도/행복도 -->
+  <div class="card">
+    <div class="card-title">연령대별 삶의 만족도 · 행복도 · 걱정도</div>
+    <div class="chart-wrap"><canvas id="chartAgeWellbeing"></canvas></div>
+  </div>
+</div>
+
+<div class="grid-3">
+  <!-- 여수 생혜만족도 -->
+  <div class="card">
+    <div class="card-title">여수시 생활환경 만족도 <small>5점 척도</small></div>
+    <div class="chart-wrap tall"><canvas id="chartYeosuSat"></canvas></div>
+  </div>
+  <!-- 교통수단 만족도 -->
+  <div class="card">
+    <div class="card-title">교통수단 만족도 <small>평균점수</small></div>
+    <div class="chart-wrap tall"><canvas id="chartTransport"></canvas></div>
+  </div>
+  <!-- 복지만족도 -->
+  <div class="card">
+    <div class="card-title">복지 분야별 만족도 <small>평균점수</small></div>
+    <div class="chart-wrap tall"><canvas id="chartWelfare"></canvas></div>
+  </div>
+</div>
+
+<!-- SECTION 3: 거주의향/경제 -->
+<div class="section-title">RESIDENCE & ECONOMY — 거주 의향 · 경제 · 일자리</div>
+<div class="grid-2">
+  <!-- 연령대별 거주의향 -->
+  <div class="card">
+    <div class="card-title">연령대별 여수시 거주 의향 <small>5점 척도 평균</small></div>
+    <div class="chart-wrap"><canvas id="chartResidence"></canvas></div>
+  </div>
+  <!-- 연령대별 소득 -->
+  <div class="card">
+    <div class="card-title">연령대별 월평균 가구소득 <small>소득콄드 평균</small></div>
+    <div class="chart-wrap"><canvas id="chartIncomeAge"></canvas></div>
+  </div>
+</div>
+
+<div class="grid-3">
+  <!-- 소득만족도 -->
+  <div class="card">
+    <div class="card-title">소득 만족도 <small>5점 척도 · 응답자</small></div>
+    <div class="chart-wrap short"><canvas id="chartIncomeSat"></canvas></div>
+  </div>
+  <!-- 일자리 충분정도 -->
+  <div class="card">
+    <div class="card-title">일자리 충분 정은도 <small>5점 척도</small></div>
+    <div class="chart-wrap short"><canvas id="chartJobSufficiency"></canvas></div>
+  </div>
+  <!-- 소비활동 장소 -->
+  <div class="card">
+    <div class="card-title">소비화동 주요 장소 <small>N=1,661</small></div>
+    <div class="chart-wrap short"><canvas id="chartShopping"></canvas></div>
+  </div>
+</div>
+
+<!-- SECTION 4: 정첡 수옔 -->
+<div class="section-title">POLICY DEMANDS — 정책 수요 분석</div>
+<div class="grid-4">
+  <!-- 인우 증가정첡 -->
+  <div class="card">
+    <div class="card-title">인구증가 정책 우선순위</div>
+    <div class="rank-item"><div class="rank-num">1</div><div class="rank-text">일자리 창출</div><div class="rank-val">758</div></div>
+    <div class="rank-item"><div class="rank-num">2</div><div class="rank-text">출산·양육 지원</div><div class="rank-val">316</div></div>
+    <div class="rank-item"><div class="rank-num">3</div><div class="rank-text">주거환경 개선</div><div class="rank-val">237</div></div>
+    <div class="rank-item"><div class="rank-num">4</div><div class="rank-text">교육환경 개선</div><div class="rank-val">94</div></div>
+    <div class="rank-item"><div class="rank-num">5</div><div class="rank-text">교통 인프라</div><div class="rank-val">79</div></div>
+  </div>
+  <!-- 저출산정책 -->
+  <div class="card">
+    <div class="card-title">저출산 대응 정책</div>
+    <div class="rank-item"><div class="rank-num">1</div><div class="rank-text">양육비 지원 확대</div><div class="rank-val">594</div></div>
+    <div class="rank-item"><div class="rank-num">2</div><div class="rank-text">보육시설 확충</div><div class="rank-val">315</div></div>
+    <div class="rank-item"><div class="rank-num">3</div><div class="rank-text">일·가정 양립</div><div class="rank-val">274</div></div>
+    <div class="rank-item"><div class="rank-num">4</div><div class="rank-text">주거 안정</div><div class="rank-val">203</div></div>
+    <div class="rank-item"><div class="rank-num">5</div><div class="rank-text">고용 안정</div><div class="rank-val">110</div></div>
+  </div>
+  <!-- 정주여건 개선 -->
+  <div class="card">
+    <div class="card-title">정주여건 개선 과제</div>
+    <div class="rank-item"><div class="rank-num">1</div><div class="rank-text">대중교통 홭충</div><div class="rank-val">446</div></div>
+    <div class="rank-item"><div class="rank-num">2</div><div class="rank-text">문화시설 확충</div><div class="rank-val">415</div></div>
+    <div class="rank-item"><div class="rank-num">3</div><div class="rank-text">의롌시설 확대</div><div class="rank-val">371</div></div>
+    <div class="rank-item"><div class="rank-num">4</div><div class="rank-text">주거환경 개선</div><div class="rank-val">279</div></div>
+    <div class="rank-item"><div class="rank-num">5</div><div class="rank-text">보육환경 개선</div><div class="rank-val">50</div></div>
+  </div>
+  <!-- 일자리창출정책 -->
+  <div class="card">
+    <div class="card-title">일자리 창출 정책</div>
+    <div class="rank-item"><div class="rank-num">1</div><div class="rank-text">기업 유치·지원</div><div class="rank-val">554</div></div>
+    <div class="rank-item"><div class="rank-num">2</div><div class="rank-text">공공 일자리</div><div class="rank-val">259</div></div>
+    <div class="rank-item"><div class="rank-num">3</div><div class="rank-text">직업훈련 강화</div><div class="rank-val">241</div></div>
+    <div class="rank-item"><div class="rank-num">4</div><div class="rank-text">창업 지원</div><div class="rank-val">203</div></div>
+    <div class="rank-item"><div class="rank-num">5</div><div class="rank-text">관광산업 육성</div><div class="rank-val">105</div></div>
+  </div>
+</div>
+
+<!-- SECTION 5: 안전/환경/디지털 -->
+<div class="section-title">SAFETY · ENVIRONMENT · DIGITAL — 안전 · 환경 · 디지털</div>
+<div class="grid-3">
+  <!-- 야간안전 -->
+  <div class="card">
+    <div class="card-title">야간 활동 안전 인식 <small>N=1,661</small></div>
+    <div class="chart-wrap short"><canvas id="chartNightSafety"></canvas></div>
+  </div>
+  <!-- 폐기물 만족도 -->
+  <div class="card">
+    <div class="card-title">폐기물 처리 만족도 <small>5점 척도</small></div>
+    <div class="chart-wrap short"><canvas id="chartWaste"></canvas></div>
+  </div>
+  <!-- SNS 사용 -->
+  <div class="card">
+    <div class="card-title">SNS 이용 현황 <small>N=1,661</small></div>
+    <div class="chart-wrap short"><canvas id="chartSNS"></canvas></div>
+  </div>
+</div>
+
+<div class="grid-3">
+  <!-- 환경문제 -->
+  <div class="card">
+    <div class="card-title">환경 문제 대응 우선 분야</div>
+    <div class="rank-item"><div class="rank-num">1</div><div class="rank-text">대기오염 개선</div><div class="rank-val">750</div></div>
+    <div class="rank-item"><div class="rank-num">2</div><div class="rank-text">폐기물 관리</div><div class="rank-val">423</div></div>
+    <div class="rank-item"><div class="rank-num">3</div><div class="rank-text">녹지 조성</div><div class="rank-val">212</div></div>
+    <div class="rank-item"><div class="rank-num">4</div><div class="rank-text">수질 개선</div><div class="rank-val">92</div></div>
+    <div class="rank-item"><div class="rank-num">5</div><div class="rank-text">소음·진동</div><div class="rank-val">82</div></div>
+  </div>
+  <!-- 필요 편의시설 -->
+  <div class="card">
+    <div class="card-title">필요 편의시설 우선순위</div>
+    <div class="rank-item"><div class="rank-num">1</div><div class="rank-text">의료시설</div><div class="rank-val">653</div></div>
+    <div class="rank-item"><div class="rank-num">2</div><div class="rank-text">체육시설</div><div class="rank-val">272</div></div>
+    <div class="rank-item"><div class="rank-num">3</div><div class="rank-text">편의·마트</div><div class="rank-val">201</div></div>
+    <div class="rank-item"><div class="rank-num">4</div><div class="rank-text">공원·녹지</div><div class="rank-val">145</div></div>
+    <div class="rank-item"><div class="rank-num">5</div><div class="rank-text">도서관</div><div class="rank-val">131</div></div>
+  </div>
+  <!-- 독서/여가 -->
+  <div class="card">
+    <div class="card-title">독서 · 여가 · 희망자노수</div>
+    <table class="data-table" style="margin-top:4px">
+      <tr><th>항목</th><th class="num">값</th><th>비고</th></tr>
+      <tr><td>연간 독서량</td><td class="num">2.5권</td><td>중앙값 1권</td></tr>
+      <tr><td>여가활동 만족도</td><td class="num">2.80</td><td>5점 만점</td></tr>
+      <tr><td>힌망 자녀수</td><td class="num">2.10명</td><td>0명 1.3%</td></tr>
+      <tr><td>평균 주택면적</td><td class="num">80.4㎡</td><td>중앙값 80㎡</td></tr>
+      <tr><td>평균 연령</td><td class="num">58.2세</td><td>중앙값 61세</td></tr>
+      <tr><td>직업 보유율</td><td class="num">57.8%</td><td>960명/1,661명</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- SECTION 6: 산업단지 -->
+<div class="section-title">INDUSTRIAL COMPLEX — 여수 산업단지 · 청년 정책</div>
+<div class="grid-2">
+  <div class="card">
+    <div class="card-title">여수 산업단지 영향 인식 <small>N=1,661</small></div>
+    <div class="chart-wrap"><canvas id="chartIndustrial"></canvas></div>
+  </div>
+  <div class="card">
+    <div class="card-title">노인 문제 유형 <small>1순위 응답 · N=690</small></div>
+    <div class="chart-wrap"><canvas id="chartElderly"></canvas></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="dashboard-footer">
+  여수시 사회조사 대시보드 &mdash; 전라남도 사회조사 여수시 마이크로데이터 기반 &middot; 응답자 1,661명 &middot; Dashboard designed with data-ink ratio maximization
+</div>
+
+<script>
+Chart.defaults.font.family = "'Noto Sans KR', sans-serif";
+Chart.defaults.font.size = 11;
+Chart.defaults.color = '#495057';
+Chart.defaults.plugins.legend.display = false;
+
+const BLUE = '#0056B3';
+const GREEN = '#28A745';
+const GRAY = '#868e96';
+const LIGHT_BLUE = '#4A90D9';
+const LIGHT_GREEN = '#5BC77A';
+const PALETTE = ['#0056B3','#28A745','#4A90D9','#5BC77A','#FF8C42','#6C5CE7','#E74C3C','#17A2B8','#F39C12','#2C3E50'];
+const PALETTE_ALPHA = PALETTE.map(c => c + '22');
+
+function barOpts(horizontal=false, stacked=false){
+  return {
+    indexAxis: horizontal?'y':'x',
+    responsive:true, maintainAspectRatio:false,
+    plugins:{legend:{display:false},tooltip:{backgroundColor:'#212529',titleFont:{weight:'600'},bodyFont:{size:12}}},
+    scales:{
+      x:{grid:{display:!horizontal,color:'#f1f3f5'},ticks:{font:{size:10}}},
+      y:{grid:{display:horizontal,color:'#f1f3f5'},ticks:{font:{size:10}}}
+    }
+  };
+}
+
+// 연령대 분포
+new Chart(document.getElementById('chartAge'),{
+  type:'bar',
+  data:{
+    labels:['15~29세','30대','40대','50대','60대','70+'],
+    datasets:[{data:[123,180,184,286,400,488],backgroundColor:BLUE,borderRadius:4,barPercentage:.65}]
+  },
+  options:{...barOpts(), plugins:{...barOpts().plugins,
+    legend:{display:false}
+  }}
+});
+
+// 성별 도넛
+new Chart(document.getElementById('chartGender'),{
+  type:'doughnut',
+  data:{
+    labels:['남성','여성'],
+    datasets:[{data:[782,879],backgroundColor:[BLUE,GREEN],borderWidth:0,cutout:'62%'}]
+  },
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}}}
+});
+
+// 가구원수
+new Chart(document.getElementById('chartHousehold'),{
+  type:'bar',
+  data:{
+    labels:['1인','2인','3인','4인','5인+'],
+    datasets:[{data:[446,774,283,114,44],backgroundColor:[BLUE,LIGHT_BLUE,'#4A90D9',GREEN,LIGHT_GREEN],borderRadius:4,barPercentage:.6}]
+  },
+  options:barOpts()
+});
+
+// 혼인상태
+new Chart(document.getElementById('chartMarriage'),{
+  type:'doughnut',
+  data:{
+    labels:['미혼','유배우','사별','이혼'],
+    datasets:[{data:[241,1079,237,104],backgroundColor:[BLUE,GREEN,'#FF8C42','#6C5CE7'],borderWidth:0,cutout:'58%'}]
+  },
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{font:{size:10},boxWidth:10,padding:8}}}}
+});
+
+// 교육수준
+new Chart(document.getElementById('chartEdu'),{
+  type:'bar',
+  data:{
+    labels:['무학','초등','중학','고등','전문대','200'],
+    datasets:[{data:[105,299,153,523,272,273,30,6],backgroundColor:BLUE,borderRadius:3,barPercentage:.65}]
+  },
+  options:barOpts()
+});
+
+// 월평균가구소득
+new Chart(document.getElementById('chartIncome'),{
+  type:'bar',
+  data:{
+    labels:['100만\n미만','100~\n200','200~\n300','300~\n400','400~\n500','500~\n600','600~\n700','700~\n800','800~\n900','900만\n이상'],
+    datasets:[{data:[42,176,174,162,139,117,76,49,25,48],backgroundColor:BLUE,borderRadius:3,barPercentage:.7}]
+  },
+  options:barOpts()
+});
+
+// 삶만족도 분포
+new Chart(document.getElementById('chartLifeSat'),{
+  type:'bar',
+  data:{
+    labels:['0점','1','2','3','4','5','6','7','8','9','10'],
+    datasets:[
+      {label:'삶만족도',data:[5,7,16,30,60,476,223,322,285,141,96],backgroundColor:BLUE,borderRadius:3,barPercentage:.55},
+      {label:'행복도',data:[8,21,38,48,80,408,204,318,317,122,97],backgroundColor:GREEN,borderRadius:3,barPercentage:.55}
+    ]
+  },
+  options:{...barOpts(),plugins:{legend:{display:true,position:'top',labels:{font:{size:10},boxWidth:12,padding:10}}}}
+});
+
+// 연령대별 삶만족도/행복도/걱정도
+new Chart(document.getElementById('chartAgeWellbeing'),{
+  type:'line',
+  data:{
+    labels:['15~29세','30대','40대','50대','60대','70+'],
+    datasets:[
+      {label:'삶 만족도',data:[6.63,7.01,6.91,6.45,6.44,6.32],borderColor:BLUE,backgroundColor:BLUE+'33',tension:.3,pointRadius:4,borderWidth:2.5,fill:false},
+      {label:'행복도',data:[6.33,6.94,6.82,6.44,6.42,6.07],borderColor:GREEN,backgroundColor:GREEN+'33',tension:.3,pointRadius:4,borderWidth:2.5,fill:false},
+      {label:'걱정도',data:[4.98,4.47,4.34,4.84,4.48,4.52],borderColor:'#FF8C42',backgroundColor:'#FF8C42'+'33',tension:.3,pointRadius:4,borderWidth:2,borderDash:[5,3],fill:false}
+    ]
+  },
+  options:{responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:true,position:'top',labels:{font:{size:10},boxWidth:12,padding:10}}},
+    scales:{y:{min:3.5,max:7.5,grid:{color:'#f1f3f5'}},x:{grid:{display:false}}}
+  }
+});
+
+// 여수 생활만족도 (수평 바)
+new Chart(document.getElementById('chartYeosuSat'),{
+  type:'bar',
+  data:{
+    labels:['지역경제','관광여건','교통','주차장','녹蠜환경'],
+    datasets:[{data:[3.68,3.34,3.05,3.00,2.89],backgroundColor:[BLUE,LIGHT_BLUE,'#4A90D9',GREEN,LIGHT_GREEN],borderRadius:4,barPercentage:.55}]
+  },
+  options:{...barOpts(true),scales:{x:{min:0,max:5,grid:{color:'#f1f3f5'},ticks:{font:{size:10}}},y:{grid:{display:false},ticks:{font:{size:11}}}}}
+});
+
+// 교통수단 만족도
+new Chart(document.getElementById('chartTransport'),{
+  type:'radar',
+  data:{
+    labels:['시내버스','시외버스','택시'],
+    datasets:[{data:[3.69,3.81,3.63],backgroundColor:BLUE+'33',borderColor:BLUE,borderWidth:2,pointRadius:4,pointBackgroundColor:BLUE}]
+  },
+  options:{responsive:true,maintainAspectRatio:false,
+    scales:{r:{min:3,max:4.2,ticks:{stepSize:.3,font:{size:9}},grid:{color:'#dee2e6'},angleLines:{color:'#dee2e6'},pointLabels:{font:{size:11}}}},
+    plugins:{legend:{display:false}}
+  }
+});
+
+// 복지만족도
+new Chart(document.getElementById('chartWelfare'),{
+  type:'bar',
+  data:{
+    labels:['보훈정책','취약계층','장애인보지','아동보지','노인보지'],
+    datasets:[{data:[3.80,3.31,3.18,3.20,3.04],backgroundColor:[BLUE,LIGHT_BLUE,'#4A90D9',GREEN,LIGHT_GREEN],borderRadius:4,barPercentage:.55}]
+  },
+  options:{...barOpts(true),scales:{x:{min:0,max:5,grid:{color:'#f1f3f5'}},y:{grid:{display:false},ticks:{font:{size:11}}}}}
+});
+
+// 연령대별 거주의향
+new Chart(document.getElementById('chartResidence'),{
+  type:'bar',
+  data:{
+    labels:['15~29세','30대','40대','50대','60대','70+'],
+    datasets:[{data:[3.17,3.58,3.80,3.95,4.12,4.43],backgroundColor:PALETTE.slice(0,6),borderRadius:4,barPercentage:.55}]
+  },
+  options:{...barOpts(),scales:{y:{min:0,max:5,grid:{color:'#f1f3f5'}},x:{grid:{display:false}}}}
+});
+
+// 연령대별 소득
+new Chart(document.getElementById('chartIncomeAge'),{
+  type:'bar',
+  data:{
+    labels:['15~29세','30대','40대','50대','60대','70+'],
+    datasets:[{data:[3.81,5.85,6.78,5.97,4.69,2.88],backgroundColor:[BLUE,LIGHT_BLUE,'#4A90D9',GREEN,LIGHT_GREEN,'#FF8C42'],borderRadius:4,barPercentage:.55}]
+  },
+  options:{...barOpts(),scales:{y:{min:0,max:8,grid:{color:'#f1f3f5'}},x:{grid:{display:false}}}}
+});
+
+// 소득만족도
+new Chart(document.getElementById('chartIncomeSat'),{
+  type:'bar',
+  data:{
+    labels:['매우불만족','불만족','보통','만족','매우만족'],
+    datasets:[{data:[65,417,770,194,33],backgroundColor:[BLUE,LIGHT_BLUE,'#dee2e6',GREEN,LIGHT_GREEN],borderRadius:3,barPercentage:.6}]
+  },
+  options:barOpts()
+});
+
+// 일자리 충분정도
+new Chart(document.getElementById('chartJobSufficiency'),{
+  type:'bar',
+  data:{
+    labels:['매우부족','부족','보통','충분','매우충분'],
+    datasets:[{data:[86,464,756,277,78],backgroundColor:['#E74C3C','#FF8C42','#dee2e6',GREEN,LIGHT_GREEN],borderRadius:3,barPercentage:.6}]
+  },
+  options:barOpts()
+});
+
+// 소비장소
+new Chart(document.getElementById('chartShopping'),{
+  type:'doughnut',
+  data:{
+    labels:['전통시장','대형마트','소규모마트','올라인섽핑','백화점','편의점','기타'],
+    datasets:[{data:[443,470,322,245,39,129,13],backgroundColor:PALETTE.slice(0,7),borderWidth:0,cutout:'55%'}]
+  },
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{font:{size:9.5},boxWidth:10,padding:6}}}}
+});
+
+// 야간안전
+new Chart(document.getElementById('chartNightSafety'),{
+  type:'bar',
+  data:{
+    labels:['매우안전','안전','보통','불안','매우불안'],
+    datasets:[{data:[13,154,591,664,239],backgroundColor:[LIGHT_GREEN,GREEN,'#dee2e6','#FF8C42','#E74C3C'],borderRadius:3,barPercentage:.6}]
+  },
+  options:barOpts()
+});
+
+// 폐기물 만족도
+new Chart(document.getElementById('chartWaste'),{
+  type:'bar',
+  data:{
+    labels:['생활폐기물','음식물쓰레기','재활용폐기물'],
+    datasets:[{data:[2.47,2.45,2.50],backgroundColor:[BLUE,LIGHT_BLUE,GREEN],borderRadius:4,barPercentage:.5}]
+  },
+  options:{...barOpts(),scales:{y:{min:0,max:5,grid:{color:'#f1f3f5'}},x:{grid:{display:false}}}}
+});
+
+// SNS
+new Chart(document.getElementById('chartSNS'),{
+  type:'doughnut',
+  data:{
+    labels:['이용','미이용'],
+    datasets:[{data:[1002,659],backgroundColor:[BLUE,'#dee2e6'],borderWidth:0,cutout:'60%'}]
+  },
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{font:{size:11},boxWidth:12,padding:10}}}}
+});
+
+// 산업단지 영향
+new Chart(document.getElementById('chartIndustrial'),{
+  type:'bar',
+  data:{
+    labels:['매우긍정','긍정','보통','부정','매우부정','모름'],
+    datasets:[{data:[275,670,513,101,12,90],backgroundColor:[GREEN,LIGHT_GREEN,'#dee2e6','#FF8C42','#E74C3C',GRAY],borderRadius:3,barPercentage:.6}]
+  },
+  options:barOpts()
+});
+
+// 노인문제
+new Chart(document.getElementById('chartElderly'),{
+  type:'bar',
+  data:{
+    labels:['건강문제','소득부족','소외감','일자리','기타'],
+    datasets:[{data:[274,273,81,32,30],backgroundColor:[BLUE,GREEN,'#FF8C42',LIGHT_BLUE,GRAY],borderRadius:4,barPercentage:.55}]
+  },
+  options:{...barOpts(true),scales:{x:{grid:{color:'#f1f3f5'}},y:{grid:{display:false},ticks:{font:{size:11}}}}}
+});
+</script>
+</body>
+</html>
